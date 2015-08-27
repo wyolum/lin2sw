@@ -1,0 +1,1 @@
+var jsonp={load:function(F,D,E){if(typeof F=="undefined"){F="jsonp"}var B=document.getElementById(F);if(B){var C=B.parentNode;C.removeChild(B);if(!D){D=B.src}}else{C=document.body}var A=document.createElement("script");A.id=F;A.type="text/javascript";if(E){A.charset=E}A.src=D;C.appendChild(A)}};

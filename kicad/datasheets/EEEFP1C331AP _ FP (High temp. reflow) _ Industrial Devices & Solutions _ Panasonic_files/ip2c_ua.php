@@ -1,0 +1,1 @@
+__LBCUA.callback_ok({"rs_code":"9"});

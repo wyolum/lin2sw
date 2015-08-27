@@ -1,0 +1,215 @@
+EESchema Schematic File Version 2
+LIBS:lin2sw
+LIBS:power
+LIBS:lin2sw-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "lin2sw - linear regulator to switcher converter"
+Date "2015-08-27"
+Rev "A"
+Comp "WyoLum"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM2675-5.0 U1
+U 1 1 55DEB664
+P 4975 2700
+F 0 "U1" H 4675 3000 40  0000 C CNN
+F 1 "LM2675-5.0" H 4825 3050 40  0000 C CNN
+F 2 "lin2sw:SO-8" H 4975 2700 40  0001 C CIN
+F 3 "" H 4975 2700 60  0000 C CNN
+	1    4975 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C1
+U 1 1 55DEB68C
+P 4025 3100
+F 0 "C1" H 4050 3200 50  0000 L CNN
+F 1 "15uF 50V" H 4050 3000 50  0000 L CNN
+F 2 "lin2sw:C_2917_HandSoldering" H 4063 2950 30  0001 C CNN
+F 3 "" H 4025 3100 60  0000 C CNN
+	1    4025 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C2
+U 1 1 55DEB808
+P 6425 3100
+F 0 "C2" H 6450 3200 50  0000 L CNN
+F 1 "68uF 16V" V 6500 2625 50  0000 L CNN
+F 2 "lin2sw:C_2312_HandSoldering" H 6463 2950 30  0001 C CNN
+F 3 "" H 6425 3100 60  0000 C CNN
+	1    6425 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L L_Small L1
+U 1 1 55DEB8DF
+P 6125 2700
+F 0 "L1" V 6200 2700 50  0000 L CNN
+F 1 "33uH" V 6075 2600 50  0000 L CNN
+F 2 "lin2sw:Choke_SMD_Pulse-PE1167" H 6125 2700 60  0001 C CNN
+F 3 "" H 6125 2700 60  0000 C CNN
+	1    6125 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C3
+U 1 1 55DEB932
+P 5675 2550
+F 0 "C3" V 5625 2625 50  0000 L CNN
+F 1 "10nF" V 5525 2525 50  0000 L CNN
+F 2 "lin2sw:C_0805_HandSoldering" H 5713 2400 30  0001 C CNN
+F 3 "" H 5675 2550 60  0000 C CNN
+	1    5675 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L D_Schottky D1
+U 1 1 55DEBAFF
+P 5925 3100
+F 0 "D1" V 5800 3175 50  0000 C CNN
+F 1 "SK35" H 6125 3150 50  0000 C CNN
+F 2 "lin2sw:Diode-SMA_Handsoldering" H 5925 3100 60  0001 C CNN
+F 3 "" H 5925 3100 60  0000 C CNN
+	1    5925 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5425 2700 6025 2700
+Wire Wire Line
+	5425 2550 5525 2550
+Wire Wire Line
+	5825 2550 5925 2550
+Wire Wire Line
+	5925 2550 5925 2950
+Connection ~ 5925 2700
+Wire Wire Line
+	6425 2150 6425 2950
+Wire Wire Line
+	6225 2700 6650 2700
+Wire Wire Line
+	4025 2950 4025 2700
+Wire Wire Line
+	3675 2700 4525 2700
+Wire Wire Line
+	4025 3250 4025 3525
+Wire Wire Line
+	3675 3525 6425 3525
+Wire Wire Line
+	6425 3525 6425 3250
+Wire Wire Line
+	5925 3250 5925 3525
+Connection ~ 5925 3525
+Wire Wire Line
+	5125 3050 5125 3525
+Connection ~ 5125 3525
+Wire Wire Line
+	6425 2150 5125 2150
+Wire Wire Line
+	5125 2150 5125 2350
+Connection ~ 6425 2700
+$Comp
+L CONN_01X03 P1
+U 1 1 55DEBC55
+P 3300 3100
+F 0 "P1" H 3300 3300 50  0000 C CNN
+F 1 "TO220" V 3400 3100 50  0000 C CNN
+F 2 "lin2sw:Pin_Header_Straight_1x03" H 3300 3100 60  0001 C CNN
+F 3 "" H 3300 3100 60  0000 C CNN
+	1    3300 3100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3000 3675 3000
+Wire Wire Line
+	3675 3000 3675 2700
+Connection ~ 4025 2700
+Wire Wire Line
+	3500 3100 3675 3100
+Wire Wire Line
+	3675 3100 3675 3525
+Connection ~ 4025 3525
+Wire Wire Line
+	3500 3200 3575 3200
+Wire Wire Line
+	3575 3200 3575 3625
+Wire Wire Line
+	3575 3625 6650 3625
+Wire Wire Line
+	6650 3625 6650 2700
+Text Label 3750 2700 0    40   ~ 0
+Vin
+Text Label 3775 3525 0    40   ~ 0
+GND
+Text Label 3775 3625 0    40   ~ 0
+Vout
+Text Label 5450 2700 0    40   ~ 0
+Vsw
+Text Label 5450 2550 0    40   ~ 0
+CB
+Text Notes 5125 2100 0    40   ~ 0
+Keep feedback wiring\naway from inductor flux
+Text Notes 7000 6750 0    40   ~ 8
+V OUT = 5V\nV IN (max) = 12V\nI LOAD (max) = 1A
+$Comp
+L TEST W1
+U 1 1 55DEC324
+P 4825 3300
+F 0 "W1" V 4875 3375 40  0000 C CNN
+F 1 "EN" V 4800 3375 40  0000 C CNN
+F 2 "lin2sw:R_0805_HandSoldering" H 4825 3300 60  0001 C CNN
+F 3 "" H 4825 3300 60  0000 C CNN
+	1    4825 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4825 3100 4825 3050
+Wire Wire Line
+	4825 3500 4825 3525
+Connection ~ 4825 3525
+$Comp
+L PWR_FLAG #FLG01
+U 1 1 55DEC5C3
+P 4275 2625
+F 0 "#FLG01" H 4275 2720 50  0001 C CNN
+F 1 "PWR_FLAG" H 4275 2805 40  0000 C CNN
+F 2 "" H 4275 2625 60  0000 C CNN
+F 3 "" H 4275 2625 60  0000 C CNN
+	1    4275 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG02
+U 1 1 55DEC5ED
+P 4275 3475
+F 0 "#FLG02" H 4275 3570 50  0001 C CNN
+F 1 "PWR_FLAG" H 4275 3655 40  0000 C CNN
+F 2 "" H 4275 3475 60  0000 C CNN
+F 3 "" H 4275 3475 60  0000 C CNN
+	1    4275 3475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4275 3475 4275 3525
+Connection ~ 4275 3525
+Wire Wire Line
+	4275 2625 4275 2700
+Connection ~ 4275 2700
+Text Notes 7000 6425 0    40   ~ 0
+C1 = EEE-FP1C331AP / TR3E156M050C0300\nC2 = EEE-FP1V101AP / T495C686M016ATE250\nC3 = GRM216R71H103KA01D\nD1 = SK35A-LTP\nL1 = P1167.333NLT
+Wire Wire Line
+	4975 3050 4975 3175
+Wire Wire Line
+	4975 3175 5275 3175
+Connection ~ 5125 3175
+Wire Wire Line
+	5275 3175 5275 3050
+$EndSCHEMATC

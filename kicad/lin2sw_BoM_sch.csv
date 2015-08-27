@@ -1,0 +1,9 @@
+Reference, Value, Footprint, Datasheet,10.05,
+U1,LM2675-5.0,Power_Integrations:SO-8,,4.03,http://www.digikey.com/product-detail/en/LM2675MX-5.0%2FNOPB/LM2675MX-5.0%2FNOPBCT-ND/3440121
+C1,15uF 50V,Capacitors_SMD:c_elec_8x6.5,,2.64,http://www.digikey.com/product-detail/en/TR3E156M050C0300/718-1785-1-ND/2260047
+C2,68uF 16V,Capacitors_SMD:c_elec_8x6.5,,0.81,http://www.digikey.com/product-detail/en/T495C686M016ATE250/399-10452-1-ND/672432
+L1,33uH,Choke_SMD:Choke_SMD_Wuerth-WE-PD-Typ-M-Typ-S_Handsoldering,,1.72,http://www.digikey.com/product-detail/en/P1167.333NLT/553-1085-1-ND/754499
+C3,10nF,Capacitors_SMD:C_0805_HandSoldering,,0.10,http://www.digikey.com/product-detail/en/GRM216R71H103KA01D/490-1664-1-ND/587472
+D1,SK35,Diodes_SMD:Diode-SMA_Handsoldering,,0.57,http://www.digikey.com/product-detail/en/SK35A-LTP/SK35A-LTPMSCT-ND/2642074
+P1,TO220,Pin_Headers:Pin_Header_Straight_1x03,,0.18,http://www.digikey.com/product-detail/en/PREC003SBAN-M71RC/S1112EC-03-ND/2774931
+W1,EN,Resistors_SMD:R_0805_HandSoldering,,0.00,Short

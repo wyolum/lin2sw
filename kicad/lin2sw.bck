@@ -1,0 +1,13 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP D_Schottky
+D Diode schottky
+$ENDCMP
+#
+$CMP LM2675-5.0
+D LM2987AIMX-5.0, 200mA Linear LDO Regulator, Low Noise, Fixed Output 5V, SO-8
+K Linear LDO Regulator 200mA 5V
+F http://www.ti.com/lit/ds/symlink/lp2987.pdf
+$ENDCMP
+#
+#End Doc Library

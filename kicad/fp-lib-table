@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name lin2sw)(type KiCad)(uri "$(KIPRJMOD)/lin2sw.pretty")(options "")(descr ""))
+)
