@@ -14,8 +14,8 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal hide)
-    (31 B.Cu signal hide)
+    (0 F.Cu signal)
+    (31 B.Cu signal)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -62,11 +62,11 @@
     (pad_drill 3.2)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
-    (visible_elements FFFFFF7F)
+    (visible_elements FFFFFFFF)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
-      (usegerberextensions false)
-      (excludeedgelayer true)
+      (layerselection 0x010f0_80000001)
+      (usegerberextensions true)
+      (excludeedgelayer false)
       (linewidth 0.050000)
       (plotframeref false)
       (viasonmask false)
@@ -82,12 +82,12 @@
       (plotvalue true)
       (plotinvisibletext false)
       (padsonsilk false)
-      (subtractmaskfromsilk false)
+      (subtractmaskfromsilk true)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory gerber/))
   )
 
   (net 0 "")
@@ -255,9 +255,9 @@
       (net 5 /Vin))
     (pad 2 smd rect (at 2.54 0 90) (size 2.4 4.3) (layers F.Cu F.Paste F.Mask)
       (net 4 /GND))
-    (model Capacitors_SMD/C_2225_HandSoldering.wrl
+    (model /home/anool/projects-git/lin2sw/kicad/3d_modules/C_2225_HandSoldering.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
+      (scale (xyz 1 0.75 1))
       (rotate (xyz 0 0 0))
     )
   )
@@ -284,9 +284,9 @@
       (net 2 /Vout))
     (pad 2 smd rect (at 2.57 0 270) (size 2.77 2.35) (layers F.Cu F.Paste F.Mask)
       (net 4 /GND))
-    (model Capacitors_SMD/C_2225_HandSoldering.wrl
+    (model /home/anool/projects-git/lin2sw/kicad/3d_modules/C_2225_HandSoldering.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
+      (scale (xyz 1 0.5 1))
       (rotate (xyz 0 0 0))
     )
   )
@@ -313,7 +313,7 @@
       (net 6 /Vsw))
     (pad 2 smd rect (at 1.25 0 90) (size 1.5 1.25) (layers F.Cu F.Paste F.Mask)
       (net 1 /CB))
-    (model Capacitors_SMD/C_0805_HandSoldering.wrl
+    (model /home/anool/projects-git/lin2sw/kicad/3d_modules/C_0805_HandSoldering.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -344,10 +344,10 @@
       (net 4 /GND))
     (pad 3 thru_hole oval (at 2.54 0 90) (size 1.7272 2.032) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 2 /Vout))
-    (model Pin_Headers/Pin_Header_Straight_1x03.wrl
+    (model /home/anool/projects-git/lin2sw/kicad/3d_modules/Pin_Header_Angled_1x03.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 -180))
     )
   )
 
@@ -384,6 +384,11 @@
       (net 5 /Vin))
     (pad 8 smd oval (at -1.905 -2.794 180) (size 0.6096 1.4732) (layers F.Cu F.Paste F.Mask)
       (net 6 /Vsw))
+    (model /home/anool/projects-git/lin2sw/kicad/3d_modules/SOIC-8_3.9x4.9mm_Pitch1.27mm.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 -90))
+    )
   )
 
   (module lin2sw:R_0805_HandSoldering (layer F.Cu) (tedit 55DF0DB0) (tstamp 55DED5CF)
@@ -408,7 +413,7 @@
       (net 3 "Net-(U1-Pad5)"))
     (pad 2 smd rect (at 1.35 0 90) (size 1.5 1.3) (layers F.Cu F.Paste F.Mask)
       (net 4 /GND))
-    (model /home/anool/Desktop/lin2sw/3d_modules/C_0805_HandSoldering.wrl
+    (model /home/anool/projects-git/lin2sw/kicad/3d_modules/R_0805_HandSoldering.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -441,6 +446,11 @@
       (net 6 /Vsw))
     (pad 2 smd rect (at 3.65 0 90) (size 1.15 2.15) (layers B.Cu B.Paste B.Mask)
       (net 2 /Vout))
+    (model /home/anool/projects-git/lin2sw/kicad/3d_modules/Choke_SMD_12x12mm_h6mm.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 2.54 2.54 2.54))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module lin2sw:Diode-SMA_Handsoldering (layer F.Cu) (tedit 55DF0D96) (tstamp 55DED57C)
@@ -486,7 +496,7 @@
       (net 4 /GND))
     (pad 2 smd rect (at 2.49936 0) (size 3.50012 1.80086) (layers F.Cu F.Paste F.Mask)
       (net 6 /Vsw))
-    (model Diodes_SMD/Diode-SMA_Handsoldering.wrl
+    (model /home/anool/projects-git/lin2sw/kicad/3d_modules/Diode-SMA_Handsoldering.wrl
       (at (xyz 0 0 0))
       (scale (xyz 0.3937 0.3937 0.3937))
       (rotate (xyz 0 0 0))
