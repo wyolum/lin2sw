@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/anool/Desktop/lin2sw/lin2sw.sch</source>
-    <date>Thu Aug 27 14:10:16 2015</date>
+    <source>/home/anool/projects-git/lin2sw/kicad/lin2sw.sch</source>
+    <date>Fri Aug 28 18:30:34 2015</date>
     <tool>Eeschema (2015-07-01 BZR 5850)-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -21,84 +21,80 @@
   <components>
     <comp ref="U1">
       <value>LM2675-5.0</value>
-      <footprint>Power_Integrations:SO-8</footprint>
+      <footprint>lin2sw:SO-8</footprint>
       <libsource lib="lin2sw" part="LM2675-5.0"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>55DEB664</tstamp>
     </comp>
     <comp ref="C1">
       <value>15uF 50V</value>
-      <footprint>Capacitors_SMD:c_elec_8x6.5</footprint>
-      <libsource lib="device" part="CP"/>
+      <footprint>lin2sw:C_2917_HandSoldering</footprint>
+      <libsource lib="lin2sw-cache" part="CP"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>55DEB68C</tstamp>
     </comp>
     <comp ref="C2">
       <value>68uF 16V</value>
-      <footprint>Capacitors_SMD:c_elec_8x6.5</footprint>
-      <libsource lib="device" part="CP"/>
+      <footprint>lin2sw:C_2312_HandSoldering</footprint>
+      <libsource lib="lin2sw-cache" part="CP"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>55DEB808</tstamp>
     </comp>
     <comp ref="L1">
       <value>33uH</value>
-      <footprint>Choke_SMD:Choke_SMD_Wuerth-WE-PD-Typ-M-Typ-S_Handsoldering</footprint>
-      <libsource lib="device" part="L_Small"/>
+      <footprint>lin2sw:Choke_SMD_Pulse-PE1167</footprint>
+      <libsource lib="lin2sw-cache" part="L_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>55DEB8DF</tstamp>
     </comp>
     <comp ref="C3">
       <value>10nF</value>
-      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
-      <libsource lib="device" part="C"/>
+      <footprint>lin2sw:C_0805_HandSoldering</footprint>
+      <libsource lib="lin2sw-cache" part="C"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>55DEB932</tstamp>
     </comp>
     <comp ref="D1">
       <value>SK35</value>
-      <footprint>Diodes_SMD:Diode-SMA_Handsoldering</footprint>
-      <libsource lib="device" part="D_Schottky"/>
+      <footprint>lin2sw:Diode-SMA_Handsoldering</footprint>
+      <libsource lib="lin2sw" part="D_Schottky"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>55DEBAFF</tstamp>
     </comp>
     <comp ref="P1">
       <value>TO220</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x03</footprint>
-      <libsource lib="conn" part="CONN_01X03"/>
+      <footprint>lin2sw:Pin_Header_Straight_1x03</footprint>
+      <libsource lib="lin2sw-cache" part="CONN_01X03"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>55DEBC55</tstamp>
     </comp>
     <comp ref="W1">
       <value>EN</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <libsource lib="conn" part="TEST"/>
+      <footprint>lin2sw:R_0805_HandSoldering</footprint>
+      <libsource lib="lin2sw-cache" part="TEST"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>55DEC324</tstamp>
     </comp>
   </components>
   <libparts>
-    <libpart lib="lin2sw" part="LM2675-5.0">
-      <description>LM2987AIMX-5.0, 200mA Linear LDO Regulator, Low Noise, Fixed Output 5V, SO-8</description>
-      <docs>http://www.ti.com/lit/ds/symlink/lp2987.pdf</docs>
+    <libpart lib="lin2sw-cache" part="CONN_01X03">
       <footprints>
-        <fp>SO*</fp>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
       </footprints>
       <fields>
-        <field name="Reference">U</field>
-        <field name="Value">LM2675-5.0</field>
-        <field name="Footprint">SO-8</field>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X03</field>
       </fields>
       <pins>
-        <pin num="1" name="CB" type="input"/>
-        <pin num="4" name="FB" type="output"/>
-        <pin num="5" name="ON/~OFF" type="passive"/>
-        <pin num="6" name="GND" type="power_in"/>
-        <pin num="7" name="VIN" type="power_in"/>
-        <pin num="8" name="VSW" type="power_out"/>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="CP">
-      <description>Polarised capacitor</description>
+    <libpart lib="lin2sw-cache" part="CP">
       <footprints>
         <fp>CP*</fp>
         <fp>Elko*</fp>
@@ -116,36 +112,7 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="TEST">
-      <description>Test point</description>
-      <fields>
-        <field name="Reference">W</field>
-        <field name="Value">TEST</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="conn" part="CONN_01X03">
-      <footprints>
-        <fp>Pin_Header_Straight_1X03</fp>
-        <fp>Pin_Header_Angled_1X03</fp>
-        <fp>Socket_Strip_Straight_1X03</fp>
-        <fp>Socket_Strip_Angled_1X03</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X03</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="L_Small">
-      <description>Inductor</description>
+    <libpart lib="lin2sw-cache" part="L_Small">
       <footprints>
         <fp>CP*</fp>
         <fp>SM*</fp>
@@ -159,8 +126,39 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="C">
-      <description>Unpolarized capacitor</description>
+    <libpart lib="lin2sw-cache" part="TEST">
+      <fields>
+        <field name="Reference">W</field>
+        <field name="Value">TEST</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lin2sw" part="LM2675-5.0">
+      <description>LM2987AIMX-5.0, 200mA Linear LDO Regulator, Low Noise, Fixed Output 5V, SO-8</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lp2987.pdf</docs>
+      <footprints>
+        <fp>SO*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM2675-5.0</field>
+        <field name="Footprint">SO-8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CB" type="input"/>
+        <pin num="2" name="NC" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+        <pin num="4" name="FB" type="output"/>
+        <pin num="5" name="ON/~OFF" type="passive"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="VIN" type="power_in"/>
+        <pin num="8" name="VSW" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="lin2sw-cache" part="C">
       <footprints>
         <fp>C?</fp>
         <fp>C_????_*</fp>
@@ -177,7 +175,7 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="D_Schottky">
+    <libpart lib="lin2sw" part="D_Schottky">
       <description>Diode schottky</description>
       <footprints>
         <fp>D-Pak_TO252AA</fp>
@@ -191,55 +189,54 @@
         <field name="Value">D_Schottky</field>
       </fields>
       <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
       </pins>
     </libpart>
   </libparts>
   <libraries>
+    <library logical="lin2sw-cache">
+      <uri>/home/anool/projects-git/lin2sw/kicad/lin2sw-cache.lib</uri>
+    </library>
     <library logical="lin2sw">
-      <uri>/home/anool/Desktop/lin2sw/lin2sw.lib</uri>
-    </library>
-    <library logical="conn">
-      <uri>/usr/local/share/kicad/library/conn.lib</uri>
-    </library>
-    <library logical="device">
-      <uri>/usr/local/share/kicad/library/device.lib</uri>
+      <uri>/home/anool/projects-git/lin2sw/kicad/lin2sw.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(U1-Pad5)">
+    <net code="1" name="/Vout">
+      <node ref="L1" pin="2"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U1" pin="4"/>
+      <node ref="P1" pin="3"/>
+    </net>
+    <net code="2" name="Net-(U1-Pad5)">
       <node ref="W1" pin="1"/>
       <node ref="U1" pin="5"/>
     </net>
-    <net code="2" name="/GND">
-      <node ref="W1" pin="2"/>
-      <node ref="D1" pin="2"/>
+    <net code="3" name="/GND">
+      <node ref="U1" pin="2"/>
+      <node ref="U1" pin="3"/>
       <node ref="U1" pin="6"/>
-      <node ref="P1" pin="2"/>
-      <node ref="C1" pin="2"/>
       <node ref="C2" pin="2"/>
+      <node ref="D1" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="W1" pin="2"/>
+      <node ref="P1" pin="2"/>
     </net>
-    <net code="3" name="/Vin">
-      <node ref="U1" pin="7"/>
-      <node ref="C1" pin="1"/>
+    <net code="4" name="/Vin">
       <node ref="P1" pin="1"/>
-    </net>
-    <net code="4" name="/Vout">
-      <node ref="L1" pin="2"/>
-      <node ref="P1" pin="3"/>
-      <node ref="U1" pin="4"/>
-      <node ref="C2" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="U1" pin="7"/>
     </net>
     <net code="5" name="/CB">
-      <node ref="C3" pin="2"/>
       <node ref="U1" pin="1"/>
+      <node ref="C3" pin="2"/>
     </net>
     <net code="6" name="/Vsw">
-      <node ref="D1" pin="1"/>
-      <node ref="C3" pin="1"/>
       <node ref="U1" pin="8"/>
       <node ref="L1" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="D1" pin="2"/>
     </net>
   </nets>
 </export>
